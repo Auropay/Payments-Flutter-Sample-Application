@@ -1,0 +1,38 @@
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        maven {
+            url 'https://storage.googleapis.com/r8-releases/raw'
+        }
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools:r8:8.2.16-dev'
+        classpath 'com.android.tools.build:gradle:8.1.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://storage.googleapis.com/r8-releases/raw'
+        }
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

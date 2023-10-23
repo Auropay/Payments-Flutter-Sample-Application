@@ -1,0 +1,29 @@
+PODS:
+  - auropay-payments-sandbox (1.1.0)
+  - auropay_payments_sandbox (0.0.1):
+    - auropay-payments-sandbox (= 1.1.0)
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - auropay_payments_sandbox (from `.symlinks/plugins/auropay_payments_sandbox/ios`)
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  trunk:
+    - auropay-payments-sandbox
+
+EXTERNAL SOURCES:
+  auropay_payments_sandbox:
+    :path: ".symlinks/plugins/auropay_payments_sandbox/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  auropay-payments-sandbox: f894e6268a2b335d47feb9ab2b4dd9e120356db5
+  auropay_payments_sandbox: bc2cb4141de55c2eb815eb9b884132809510b222
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+
+PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+
+COCOAPODS: 1.12.1
